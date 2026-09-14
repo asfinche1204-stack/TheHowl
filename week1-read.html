@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The Howl — Week 1 · Way Too Early Read</title>
+<meta name="description" content="Sunday night, MNF pending. Pedantic is done at 174.56. The Boo Bears lead Righteous Dave by 0.94 with five players between them still to play.">
+<meta name="theme-color" content="#17110f">
+<link rel="canonical" href="https://the-howl.onrender.com/week1-read.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="The Howl">
+<meta property="og:title" content="The Howl · Week 1 Way Too Early Read">
+<meta property="og:description" content="Sunday night, MNF pending. Pedantic is done at 174.56. The Boo Bears lead Righteous Dave by 0.94 with five players between them still to play.">
+<meta property="og:url" content="https://the-howl.onrender.com/week1-read.html">
+<meta property="og:image" content="https://the-howl.onrender.com/og/week1-read.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="The Howl · Week 1 Way Too Early Read">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The Howl · Week 1 Way Too Early Read">
+<meta name="twitter:description" content="Sunday night, MNF pending. Pedantic is done at 174.56. The Boo Bears lead Righteous Dave by 0.94 with five players between them still to play.">
+<meta name="twitter:image" content="https://the-howl.onrender.com/og/week1-read.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Pirata+One&family=Barlow+Condensed:wght@600;700&family=Playfair+Display:wght@900&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root{--ts:1;
+  --paper:#17110f;--paper-2:#1f1715;--pulp:#f1e9d6;--pulp-dim:#a89c86;--rule:#3a2c28;
+  --bulb:#ff3b3b;--bulb-hot:#ffe4e4;--bulb-glow:rgba(255,59,59,.55);
+  --turf:#3ddc84;--siren:#ffc21a;
+  --black:"Pirata One",serif;--board:"Barlow Condensed","Arial Narrow",sans-serif;--serif-head:"Playfair Display",Georgia,serif;--body:"Lora",Georgia,serif}
+html{font-size:calc(16px*var(--ts));scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--pulp);font-family:var(--body);font-size:1.06rem;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;background:radial-gradient(ellipse at 50% -10%,rgba(255,59,59,.10),transparent 55%),repeating-linear-gradient(0deg,rgba(255,255,255,.012) 0 1px,transparent 1px 3px)}
+#rain{position:fixed;inset:0;width:100%;height:100%;z-index:0;pointer-events:none;opacity:.42}
+.paper{position:relative;z-index:1}
+a{color:var(--bulb)}
+a:focus-visible,button:focus-visible{outline:2px solid var(--siren);outline-offset:2px}
+/* ---------- ticker ---------- */
+.ticker{position:sticky;top:0;z-index:5;display:flex;align-items:stretch;background:rgba(23,17,15,.94);backdrop-filter:blur(6px);border-bottom:1px solid var(--rule);font-family:var(--board);font-weight:700;letter-spacing:.14em;font-size:.95rem;text-transform:uppercase}
+.ticker .live{display:flex;align-items:center;gap:8px;padding:0 14px;color:var(--siren);border-right:1px solid var(--rule);white-space:nowrap}
+.ticker .live i{width:9px;height:9px;border-radius:50%;background:var(--siren);box-shadow:0 0 10px var(--siren);animation:pulse 1.2s infinite}
+.ticker .tape{flex:1;overflow:hidden;position:relative;display:flex;align-items:center}
+.ticker .track{display:inline-flex;white-space:nowrap;animation:tick 75s linear infinite;padding:10px 0;will-change:transform}
+.ticker .track:hover{animation-play-state:paused}
+.ticker .track span.i{padding:0 22px;color:var(--pulp-dim)}
+.ticker .track span.i b{color:var(--pulp);font-weight:700}
+.ticker .track span.i .g{color:var(--turf)}.ticker .track span.i .r{color:var(--bulb)}
+.ticker .track span.i::after{content:"✦";color:var(--bulb);margin-left:22px}
+.ticker .aa{display:flex;align-items:center;gap:4px;padding:0 12px;border-left:1px solid var(--rule);color:var(--pulp-dim)}
+.ticker .aa span{margin-right:4px;font-size:.8rem}
+.ticker .aa button{font-family:var(--board);font-weight:700;background:none;border:1px solid var(--rule);color:var(--pulp-dim);cursor:pointer;line-height:1;padding:3px 6px;border-radius:3px}
+.ticker .aa button[data-s=s]{font-size:.75rem}.ticker .aa button[data-s=m]{font-size:.95rem}.ticker .aa button[data-s=l]{font-size:1.15rem}
+.ticker .aa button.on{color:var(--bulb);border-color:var(--bulb);box-shadow:0 0 8px var(--bulb-glow)}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
+@keyframes tick{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media(prefers-reduced-motion:reduce){.ticker .track{animation:none}.ticker .live i{animation:none}#rain{display:none}}
+/* ---------- masthead ---------- */
+.readmast{text-align:center;padding:30px 16px 16px;border-bottom:3px double var(--rule)}
+.readmast .kicker{font-family:var(--board);font-weight:700;letter-spacing:.42em;font-size:1.1rem;color:var(--pulp-dim);text-transform:uppercase}
+.readmast h1{font-family:var(--black);font-weight:400;font-size:clamp(3rem,9vw,6.4rem);line-height:1;margin:4px 0 6px;color:var(--bulb-hot);text-shadow:0 0 4px #fff,0 0 12px var(--bulb),0 0 30px var(--bulb),0 0 70px var(--bulb-glow);letter-spacing:.01em}
+.readmast h1 span{display:inline-block;transition:opacity .08s,text-shadow .08s}
+.readmast h1 span.off{opacity:.22;text-shadow:none;color:var(--bulb)}
+.readmast .tag{font-family:var(--board);font-weight:600;letter-spacing:.3em;font-size:.95rem;color:var(--bulb);text-transform:uppercase;margin-top:-2px}
+.readmast .wk{font-family:var(--serif-head);font-weight:900;font-size:clamp(1.6rem,4vw,2.6rem);color:var(--pulp);margin-top:10px}
+.readmast .meta{font-family:var(--board);font-weight:700;letter-spacing:.12em;font-size:1.05rem;color:var(--pulp-dim);margin-top:6px;text-transform:uppercase}
+.readmast .meta a{color:var(--bulb);text-decoration:none}
+.wrap{max-width:1180px;margin:0 auto;padding:6px 18px 40px}
+/* ---------- matchup cards ---------- */
+.games{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:14px;margin:22px 0}
+.game{border:1px solid var(--rule);background:rgba(241,233,214,.03);padding:12px 14px 10px;position:relative}
+.game .st{display:inline-block;margin-bottom:4px;font-family:var(--board);font-weight:700;letter-spacing:.14em;font-size:.85rem;padding:2px 7px;border-radius:3px;border:1px solid currentColor;text-transform:uppercase}
+.game .st.final{color:var(--pulp-dim)}
+.game .st.live{color:var(--siren);box-shadow:0 0 8px rgba(255,194,26,.45);animation:pulse 1.4s infinite}
+.game .st.open{color:var(--turf);box-shadow:0 0 8px rgba(61,220,132,.4)}
+.game .row{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:baseline;padding:5px 0}
+.game .row+.row{border-top:1px dashed var(--rule)}
+.game .nm{font-family:var(--board);font-weight:700;font-size:1.25rem;letter-spacing:.04em;line-height:1.05}
+.game .nm small{display:block;font-size:.8rem;letter-spacing:.12em;color:var(--pulp-dim);margin-top:3px;text-transform:uppercase}
+.game .pts{font-family:var(--board);font-weight:700;font-size:1.9rem;color:var(--bulb);line-height:1}
+.game .row.lead .pts{color:var(--turf);text-shadow:0 0 8px rgba(61,220,132,.5)}
+.game .row.trail .pts{color:var(--pulp-dim)}
+.game .foot{font-family:var(--board);font-weight:600;letter-spacing:.06em;font-size:.95rem;color:var(--pulp-dim);margin-top:6px;border-top:1px solid var(--rule);padding-top:6px;line-height:1.35}
+.game .foot b{color:var(--pulp);font-weight:700}
+/* ---------- quick hits ---------- */
+.hits{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:8px 0 22px}
+@media(max-width:900px){.hits{grid-template-columns:1fr}}
+.hit{border:1px solid var(--rule);padding:14px 16px}
+.hit .lbl{font-family:var(--board);font-weight:700;letter-spacing:.2em;font-size:.9rem;color:var(--turf);text-transform:uppercase}
+.hit .big{font-family:var(--serif-head);font-weight:900;font-size:1.6rem;line-height:1.1;margin:4px 0 6px}
+.hit .big span{color:var(--bulb)}
+.hit p{margin:0;color:var(--pulp-dim);font-size:.95rem}
+/* ---------- copy + alive ---------- */
+.copy{max-width:760px;margin:10px auto 0}
+.copy p{margin:0 0 .9em}
+.copy p.lede::first-letter{font-family:var(--serif-head);font-weight:900;font-size:3.3em;float:left;line-height:.82;padding:6px 8px 0 0;color:var(--bulb)}
+.alive{border:1px solid var(--turf);box-shadow:0 0 12px rgba(61,220,132,.25);padding:14px 18px;margin:22px auto;max-width:760px}
+.alive h4{font-family:var(--board);font-weight:700;letter-spacing:.2em;font-size:.95rem;color:var(--turf);margin:0 0 8px;text-transform:uppercase}
+.alive ul{margin:0;padding-left:20px}.alive li{margin:0 0 6px}
+/* ---------- hub ---------- */
+.thisweek{display:flex;flex-wrap:wrap;align-items:center;gap:10px 18px;margin:18px 0 0;padding:12px 16px;border:1px solid var(--turf);box-shadow:0 0 14px rgba(61,220,132,.25);font-family:var(--board);font-weight:700;letter-spacing:.1em;font-size:1rem;text-transform:uppercase}
+.thisweek .lbl{color:var(--turf)}
+.thisweek a{color:var(--pulp);text-decoration:none}.thisweek a b{color:var(--bulb);font-weight:700;margin-right:8px}.thisweek a:hover b{text-shadow:0 0 8px var(--bulb)}
+.thisweek .soon{color:var(--pulp-dim);margin-left:auto}
+@media(max-width:700px){.thisweek .soon{margin-left:0}}
+.intro{max-width:760px;margin:26px auto 8px}
+.intro p{margin:0 0 .9em}
+.intro p.lede::first-letter{font-family:var(--serif-head);font-weight:900;font-size:3.3em;float:left;line-height:.82;padding:6px 8px 0 0;color:var(--bulb)}
+.issues{max-width:760px;margin:18px auto 0;border-top:3px double var(--rule)}
+.issues h3{font-family:var(--board);font-weight:700;letter-spacing:.22em;font-size:.95rem;color:var(--pulp-dim);margin:14px 0 6px;text-transform:uppercase}
+.issue{display:grid;grid-template-columns:110px 1fr;gap:14px;padding:12px 0;border-bottom:1px dashed var(--rule);align-items:baseline}
+.issue .wk{font-family:var(--board);font-weight:700;letter-spacing:.12em;font-size:1rem;color:var(--turf);text-transform:uppercase}
+.issue .wk small{display:block;color:var(--pulp-dim);font-size:.8rem}
+.issue a{font-family:var(--serif-head);font-weight:900;font-size:1.25rem;color:var(--pulp);text-decoration:none;line-height:1.15}
+.issue a:hover{color:var(--bulb-hot);text-shadow:0 0 10px var(--bulb)}
+.issue p{margin:3px 0 0;color:var(--pulp-dim);font-size:.95rem}
+.issue.soon .wk{color:var(--pulp-dim)}.issue.soon .t{font-family:var(--serif-head);font-weight:900;font-size:1.25rem;color:var(--pulp-dim);line-height:1.15}
+@media(max-width:520px){.issue{grid-template-columns:1fr;gap:4px}}
+.slate{max-width:760px;margin:26px auto 0}
+.slate table{width:100%;border-collapse:collapse;font-family:var(--board);font-size:1.05rem;letter-spacing:.04em}
+.slate th{text-align:left;font-weight:700;letter-spacing:.2em;font-size:.8rem;color:var(--pulp-dim);padding:6px 8px;border-bottom:1px solid var(--rule);text-transform:uppercase}
+.slate td{padding:7px 8px;border-bottom:1px dashed var(--rule)}
+.slate td.n{text-align:right;font-weight:700;color:var(--bulb)}
+.slate tr.top td.n{color:var(--turf)}
+/* footer */
+footer{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 18px;margin:40px 0 0;padding:14px 0 0;border-top:3px double var(--rule);font-family:var(--board);font-weight:700;letter-spacing:.14em;font-size:.85rem;color:var(--pulp-dim);text-transform:uppercase}
+</style>
+</head>
+<body>
+<canvas id="rain" aria-hidden="true"></canvas>
+<div class="paper">
+<div class="ticker" role="marquee" aria-label="League tape">
+  <div class="live"><i></i>LIVE</div>
+  <div class="tape"><div class="track" id="track"></div></div>
+  <div class="aa" role="group" aria-label="Text size"><span>TEXT</span><button data-s="s" title="Smaller text">A</button><button data-s="m" title="Default text">A</button><button data-s="l" title="Larger text">A</button></div>
+</div>
+
+<header class="readmast">
+  <div class="kicker">Way Too Early Read</div>
+  <h1 id="mast">The Howl</h1>
+  <div class="tag">Kimosabe Wolfpack Titties · weekly dispatch</div>
+  <div class="wk">Week 1 · Sunday Night</div>
+  <div class="meta">Sept 13, 2026 · 9:30 pm · SNF in progress · MNF pending · <a href="index.html">← front page</a></div>
+</header>
+<div class="wrap">
+
+<div class="games"><div class="game"><span class="st open">MNF PENDING</span>
+  <div class="row lead"><div class="nm">The Raleighwood Boo Bears<small>2 live tonight · 1 Monday</small></div><div class="pts">109.20</div></div>
+  <div class="row trail"><div class="nm">Righteous Dave<small>done tonight · 2 Monday</small></div><div class="pts">108.26</div></div>
+  <div class="foot">0.94 apart. Caleb Williams's 37.26 is the best line in the league and it's on the trailing side. Proj: <b>Boo Bears 134.3</b> · Dave 129.6</div></div><div class="game"><span class="st open">MNF PENDING</span>
+  <div class="row lead"><div class="nm">Spreadin' dem Sheets<small>1 live tonight · 2 Monday</small></div><div class="pts">140.36</div></div>
+  <div class="row trail"><div class="nm">The Real Chargers<small>1 live tonight · 1 Monday</small></div><div class="pts">120.56</div></div>
+  <div class="foot">Josh Allen 35.66 and Swift 31.9 built the lead; Sheets has three of the five players still to go. Proj: <b>Sheets 164.1</b> · Chargers 134.9</div></div><div class="game"><span class="st live">SNF LIVE</span>
+  <div class="row lead"><div class="nm">Waiver Wire Wizards<small>2 live tonight</small></div><div class="pts">112.68</div></div>
+  <div class="row trail"><div class="nm">Raleighwood Chargers<small>1 live tonight</small></div><div class="pts">103.74</div></div>
+  <div class="foot">The only game that ends tonight. Jeanty's 29.7 has Raleighwood within 8.9, down a player. Proj: <b>Wizards 128.0</b> · Raleighwood 111.3</div></div><div class="game"><span class="st open">MNF PENDING</span>
+  <div class="row lead"><div class="nm">Poop Poop<small>done</small></div><div class="pts">104.36</div></div>
+  <div class="row trail"><div class="nm">Handy Cramp<small>1 live tonight · 2 Monday</small></div><div class="pts">94.10</div></div>
+  <div class="foot">Poop Poop is finished and leads by 10.26. Handy Cramp has three players left to find it. Proj: <b>Handy Cramp 123.4</b> · Poop Poop 104.4</div></div><div class="game"><span class="st open">MNF PENDING</span>
+  <div class="row lead"><div class="nm">Two Chinz<small>1 live tonight</small></div><div class="pts">123.12</div></div>
+  <div class="row trail"><div class="nm">She Gibbs it up until i Corum<small>2 live tonight · 1 Monday</small></div><div class="pts">96.36</div></div>
+  <div class="foot">26.8 gap, three players to one. Gibbs went 31.1 for the team named after him. Proj: <b>Two Chinz 127.4</b> · Gibbs 125.4 — two points on paper</div></div><div class="game"><span class="st open">DONE · MNF PENDING</span>
+  <div class="row lead"><div class="nm">PedanticGaspOfaFart<small>done</small></div><div class="pts">174.56</div></div>
+  <div class="row trail"><div class="nm">The People's Champ<small>1 Monday</small></div><div class="pts">91.92</div></div>
+  <div class="foot">Henry 34.8, Lamar 24.96, Hubbard 22.2. The People's Champ needs 82.6 from one player in Kansas City. Proj: <b>Pedantic 174.6</b> · Champ 98.9</div></div></div>
+
+<div class="hits">
+  <div class="hit"><div class="lbl">Sunday's top scorer</div><div class="big">Caleb Williams, <span>37.26</span></div><p>For Righteous Dave, in a 59–37 Bears win in Charlotte that looked like a fantasy league of its own. Dave is still down 0.94 with two players Monday night.</p></div>
+  <div class="hit"><div class="lbl">The high score</div><div class="big">PedanticGaspOfaFart, <span>174.56</span></div><p>Henry, Lamar, Hubbard, and every starter finished by the end of the late window. Nobody in the league is within 34 of it. That's the number to beat for a while.</p></div>
+  <div class="hit"><div class="lbl">The trenches</div><div class="big">T.J. Watt, <span>22.5</span></div><p>A point behind Jonathan Taylor on the same Real Chargers roster. Aidan Hutchinson added 16.5 for the Wizards and Highsmith 13.5 for the Gibbs team. The pass rush scores like a receiver here.</p></div>
+</div>
+
+<div class="alive">
+  <h4>Still alive going into Monday</h4>
+  <ul>
+    <li><b>Boo Bears vs Righteous Dave</b> — 0.94 apart. The Boo Bears have two on the field tonight and one in Kansas City tomorrow; Dave has two in Kansas City. Projections are 134.3 to 129.6. This is the real one.</li>
+    <li><b>Handy Cramp vs Poop Poop</b> — Poop Poop can't score again. Handy Cramp needs 10.3 from one player tonight and two tomorrow, and is projected to win by 19. Poop Poop's Monday is a watching night.</li>
+    <li><b>The Gibbs team vs Two Chinz</b> — 26.8 is a lot, but it's three players against one and the projections land two points apart. Open.</li>
+    <li><b>Real Chargers vs Sheets</b> — down 19.8 with one live and one Monday, against a Sheets side with three still to go. Alive on paper.</li>
+    <li><b>The People's Champ</b> — needs 82.6 from one Monday night player. Alive the way a scratch-off is alive.</li>
+    <li><b>Wizards vs Raleighwood Chargers</b> — ends tonight, in the Meadowlands. Wizards up 8.9 with the extra player.</li>
+  </ul>
+</div>
+
+<div class="copy">
+  <p class="lede">PedanticGaspOfaFart put up 174.56 and was done before the 4:25 games ended — Derrick Henry 34.8, Lamar Jackson 24.96, Chuba Hubbard 22.2 — and drew The People's Champ, who sits at 91.92 with one player left to play in Kansas City. The Champ needs 82.6 from him. The projection says 98.9 total. First week, first blowout, and the high score is going to sit at the top of the standings page for a long time.</p>
+  <p>Everything else is closer. Caleb Williams threw the Bears to 59 points in Charlotte and 37.26 into Righteous Dave's column, and Dave is still trailing: The Raleighwood Boo Bears are up 0.94 with two players on the field tonight and one tomorrow, and Dave has two in the Monday game. Justin Jefferson's 27.2 is the second-best line on Dave's roster and it might not be enough. Whoever wins this one is going to claim they knew it all along.</p>
+  <p>Spreadin' dem Sheets got 35.66 from Josh Allen and 31.9 from D'Andre Swift and leads The Real Chargers by 19.8 with more players left. Jonathan Taylor and T.J. Watt did their jobs for the Chargers. It's the other seven starters.</p>
+  <p>Poop Poop finished at 104.36 and leads Handy Cramp by 10.26, which sounds better than it is. Handy Cramp has Bijan Robinson's 27.3 in the bank, one starter on the field tonight, two tomorrow, and a projection that wins by 19. Two Chinz is up 26.8 on the Gibbs team, and the projection calls it a two-point game. Jahmyr Gibbs went for 31.1 on the team named after him, which is the whole reason the name exists.</p>
+  <p>The one game that ends tonight: Waiver Wire Wizards up 8.9 on the Raleighwood Chargers, with two players in Cowboys–Giants against one. Ashton Jeanty's 29.7 is the best number in a losing effort so far. David Montgomery's 27.4 is why.</p>
+  <p>Full recap and Week 2 outlook Tuesday, after Broncos–Chiefs settles five of these.</p>
+</div>
+
+<footer><span>The Howl · Week 1 · Way Too Early Read</span><span>Kimosabe Wolfpack Titties · Sunday night, MNF pending</span></footer>
+</div>
+</div>
+<script>
+(function(){
+  /* ---- ticker ---- */
+  var items=['<b>WEEK 1</b> · WAY TOO EARLY READ · SNF LIVE · MNF PENDING','<span class="r">PEDANTIC 174.56 · DONE BY 7:30 · HIGH SCORE OF THE WEEK</span>','CALEB WILLIAMS <b>37.26</b> · RIGHTEOUS DAVE · TRAILING BY 0.94','<span class="g">BOO BEARS 109.20 · DAVE 108.26 · THREE PLAYERS LEFT VS TWO</span>','JOSH ALLEN <b>35.66</b> · HENRY <b>34.8</b> · SWIFT <b>31.9</b> · GIBBS <b>31.1</b> · JEANTY <b>29.7</b>','T.J. WATT <b>22.5</b> · HUTCHINSON <b>16.5</b> · HIGHSMITH <b>13.5</b> · THE TRENCHES COUNT HERE','<span class="r">PEOPLE\'S CHAMP 91.92 · ONE PLAYER MONDAY · NEEDS 82.6</span>','POOP POOP 104.36 · FINISHED · HANDY CRAMP NEEDS 10.3 FROM THREE','WIZARDS 112.68 · RALEIGHWOOD 103.74 · ENDS TONIGHT','COWBOYS–GIANTS 7–7 LATE 2ND AT PRESS TIME · BRONCOS–CHIEFS TOMORROW 8:15'];
+  var track=document.getElementById('track');
+  if(track){var html=items.map(function(t){return '<span class="i">'+t+'</span>'}).join('');track.innerHTML=html+html;}
+  /* ---- text size ---- */
+  var KEY='howl-ts',map={s:.92,m:1,l:1.12},cur='m';
+  try{cur=localStorage.getItem(KEY)||'m'}catch(e){}
+  function apply(k){cur=map[k]?k:'m';document.documentElement.style.setProperty('--ts',map[cur]);
+    document.querySelectorAll('.aa button').forEach(function(b){b.classList.toggle('on',b.dataset.s===cur)});
+    try{localStorage.setItem(KEY,cur)}catch(e){}}
+  apply(cur);
+  document.querySelectorAll('.aa button').forEach(function(b){b.addEventListener('click',function(){apply(b.dataset.s)})});
+  /* ---- masthead flicker ---- */
+  var m=document.getElementById('mast');
+  var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(m&&!reduce){
+    m.innerHTML=m.textContent.split('').map(function(c){return c===' '?' ':'<span>'+c+'</span>'}).join('');
+    var sp=m.querySelectorAll('span');
+    (function flick(){var s=sp[Math.floor(Math.random()*sp.length)];s.classList.add('off');
+      setTimeout(function(){s.classList.remove('off');if(Math.random()<.35){setTimeout(function(){s.classList.add('off');setTimeout(function(){s.classList.remove('off')},60)},90)}},70+Math.random()*140);
+      setTimeout(flick,900+Math.random()*3600)})();
+  }
+  /* ---- football rain ---- */
+  var c=document.getElementById('rain');
+  if(c&&!reduce){
+    var ctx=c.getContext('2d'),W,H,balls=[];
+    function size(){W=c.width=window.innerWidth;H=c.height=window.innerHeight}
+    size();window.addEventListener('resize',size);
+    function mk(y){return{x:Math.random()*W,y:y==null?Math.random()*H:y,r:7+Math.random()*9,v:.25+Math.random()*.55,a:Math.random()*Math.PI*2,w:(Math.random()-.5)*.012,o:.25+Math.random()*.45}}
+    for(var i=0;i<38;i++)balls.push(mk());
+    function lens(L,h){ctx.beginPath();ctx.moveTo(-L,0);ctx.bezierCurveTo(-L*.5,-h*1.35,L*.5,-h*1.35,L,0);ctx.bezierCurveTo(L*.5,h*1.35,-L*.5,h*1.35,-L,0);ctx.closePath()}
+    function ball(b){ctx.save();ctx.translate(b.x,b.y);ctx.rotate(b.a);ctx.globalAlpha=b.o;var L=b.r*1.8,h=b.r;
+      lens(L,h);ctx.fillStyle='#7a4426';ctx.fill();
+      ctx.save();lens(L,h);ctx.clip();
+      ctx.fillStyle='#f1e9d6';ctx.fillRect(-L*.70,-h*1.6,L*.09,h*3.2);ctx.fillRect(L*.61,-h*1.6,L*.09,h*3.2);
+      ctx.globalAlpha=b.o*.28;ctx.fillStyle='#ffffff';ctx.beginPath();ctx.ellipse(-L*.08,-h*.48,L*.42,h*.2,0,0,Math.PI*2);ctx.fill();
+      ctx.restore();
+      lens(L,h);ctx.strokeStyle='#3a1d0e';ctx.lineWidth=Math.max(1,b.r*.13);ctx.stroke();
+      ctx.strokeStyle='#f1e9d6';ctx.lineCap='round';ctx.lineWidth=Math.max(1,b.r*.15);
+      ctx.beginPath();ctx.moveTo(-L*.4,0);ctx.lineTo(L*.4,0);ctx.stroke();
+      for(var k=-2;k<=2;k++){var x=k*L*.15;ctx.beginPath();ctx.moveTo(x,-h*.3);ctx.lineTo(x,h*.3);ctx.stroke()}
+      ctx.restore()}
+    (function loop(){ctx.clearRect(0,0,W,H);
+      for(var i=0;i<balls.length;i++){var b=balls[i];b.y+=b.v;b.a+=b.w;b.x+=Math.sin(b.y*.01)*.15;if(b.y-b.r*2>H)balls[i]=mk(-20);ball(balls[i])}
+      requestAnimationFrame(loop)})();
+  }
+})();
+</script>
+</body>
+</html>
