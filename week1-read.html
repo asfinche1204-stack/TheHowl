@@ -121,6 +121,62 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--siren);outline-offs
 .slate td{padding:7px 8px;border-bottom:1px dashed var(--rule)}
 .slate td.n{text-align:right;font-weight:700;color:var(--bulb)}
 .slate tr.top td.n{color:var(--turf)}
+
+/* ---------- headliners ---------- */
+.headliners{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:22px 0 8px}
+.headliners .mod.full{grid-column:1/-1}
+@media(max-width:900px){.headliners{grid-template-columns:1fr}}
+.mod{border:1px solid var(--rule);padding:14px 16px 12px;background:rgba(241,233,214,.02)}
+.mod h3{font-family:var(--board);font-weight:700;letter-spacing:.2em;font-size:.9rem;color:var(--turf);margin:0;text-transform:uppercase}
+.mod .sub{color:var(--pulp-dim);font-size:.88rem;margin:2px 0 10px;line-height:1.4}
+.dots{display:inline-flex;gap:3px;margin-right:6px;vertical-align:middle}
+.dots i{width:7px;height:7px;border-radius:50%;display:inline-block}
+.dots i.l{background:var(--siren);box-shadow:0 0 6px var(--siren)}
+.dots i.m{border:1px solid var(--turf);background:transparent}
+.board .r{display:grid;grid-template-columns:minmax(120px,170px) 1fr 62px 62px;gap:10px;align-items:center;padding:4px 0;border-bottom:1px dashed var(--rule)}
+.board .r:last-child{border-bottom:0}
+.board .nm{font-family:var(--board);font-weight:700;letter-spacing:.04em;font-size:1rem;line-height:1.05;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.board .nm small{display:block;font-size:.72rem;letter-spacing:.12em;color:var(--pulp-dim);text-transform:uppercase;margin-top:2px}
+.board .trk{position:relative;height:16px}
+.board .ghost{position:absolute;top:0;bottom:0;left:0;border:1px dashed var(--pulp-dim);opacity:.55}
+.board .bar{position:absolute;top:2px;bottom:2px;left:0;background:var(--pulp-dim);transform-origin:left;transform:scaleX(0);transition:transform 1.1s cubic-bezier(.2,.7,.2,1)}
+.board .r.lead .bar{background:var(--turf);box-shadow:0 0 8px rgba(61,220,132,.45)}
+.mod.in .bar{transform:scaleX(1)}
+.board .pts{font-family:var(--board);font-weight:700;font-size:1.15rem;text-align:right;color:var(--pulp)}
+.board .r.lead .pts{color:var(--turf)}
+.board .pj{font-family:var(--board);font-weight:600;font-size:.8rem;color:var(--pulp-dim);text-align:right;letter-spacing:.04em;text-transform:uppercase}
+@media(max-width:520px){.board .r{grid-template-columns:minmax(0,1fr) 58px 50px}.board .trk{grid-column:1/-1;order:5}.board .pj .pw{display:none}}
+.swing .r{display:grid;grid-template-columns:1fr 2fr 1fr;gap:8px;align-items:center;padding:7px 0;border-bottom:1px dashed var(--rule)}
+.swing .r:last-child{border-bottom:0}
+.swing .a,.swing .b{font-family:var(--board);font-weight:700;font-size:.95rem;letter-spacing:.03em;line-height:1.05}
+.swing .b{text-align:right}
+.swing .a small,.swing .b small{display:block;font-size:.72rem;letter-spacing:.08em;color:var(--pulp-dim);text-transform:uppercase;margin-top:2px}
+.swing .r.flip .b small{color:var(--siren)}
+.swing .mt{position:relative;height:26px}
+.swing .mt::before{content:"";position:absolute;left:50%;top:0;bottom:0;border-left:1px solid var(--pulp)}
+.swing .mt::after{content:"";position:absolute;left:0;right:0;top:50%;border-top:1px solid var(--rule)}
+.swing .bar{position:absolute;top:6px;height:14px;background:var(--turf);box-shadow:0 0 8px rgba(61,220,132,.4);transform-origin:right;transform:scaleX(0);transition:transform 1s cubic-bezier(.2,.7,.2,1)}
+.swing .pm{position:absolute;top:1px;height:24px;width:3px;background:var(--siren);box-shadow:0 0 7px var(--siren);z-index:1}
+@media(max-width:520px){.swing .r{grid-template-columns:1fr 1fr}.swing .mt{grid-column:1/-1;order:5}}
+.lines .r{display:grid;grid-template-columns:22px minmax(110px,1fr) 2fr 56px;gap:8px;align-items:center;padding:3px 0}
+.lines .k{font-family:var(--board);font-weight:700;color:var(--pulp-dim);font-size:.85rem}
+.lines .p{font-family:var(--board);font-weight:700;font-size:1rem;line-height:1.05;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.lines .p small{display:block;font-size:.7rem;letter-spacing:.1em;color:var(--pulp-dim);text-transform:uppercase;margin-top:1px}
+.lines .trk{height:10px;position:relative}
+.lines .bar{position:absolute;top:0;bottom:0;left:0;background:var(--bulb);box-shadow:0 0 8px var(--bulb-glow);transform-origin:left;transform:scaleX(0);transition:transform 1s cubic-bezier(.2,.7,.2,1)}
+.lines .pts{font-family:var(--board);font-weight:700;font-size:1.05rem;color:var(--bulb);text-align:right}
+.rings{display:grid;grid-template-columns:repeat(auto-fill,minmax(84px,1fr));gap:10px 6px}
+.ring{text-align:center}
+.ring .w{position:relative;width:64px;height:64px;margin:0 auto}
+.ring svg{position:absolute;inset:0;width:64px;height:64px;transform:rotate(-90deg)}
+.ring circle{fill:none;stroke-width:6}
+.ring circle.bg{stroke:var(--rule)}
+.ring circle.fg{stroke:var(--turf);stroke-linecap:round;stroke-dasharray:0 200;transition:stroke-dasharray 1.2s cubic-bezier(.2,.7,.2,1)}
+.ring.mid circle.fg{stroke:var(--siren)}.ring.hi circle.fg{stroke:var(--bulb);filter:drop-shadow(0 0 4px var(--bulb-glow))}
+.mod.in .ring circle.fg{stroke-dasharray:var(--d) 200}
+.ring .v{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:var(--board);font-weight:700;font-size:.95rem}
+.ring .t{font-family:var(--board);font-weight:600;font-size:.7rem;letter-spacing:.08em;color:var(--pulp-dim);text-transform:uppercase;line-height:1.1;margin-top:4px}
+@media(prefers-reduced-motion:reduce){.board .bar,.swing .bar,.lines .bar{transform:none;transition:none}.ring circle.fg{stroke-dasharray:var(--d) 200;transition:none}}
 /* footer */
 footer{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 18px;margin:40px 0 0;padding:14px 0 0;border-top:3px double var(--rule);font-family:var(--board);font-weight:700;letter-spacing:.14em;font-size:.85rem;color:var(--pulp-dim);text-transform:uppercase}
 </style>
@@ -142,6 +198,62 @@ footer{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 18px;ma
   <div class="meta">Sept 13, 2026 · 9:30 pm · SNF in progress · MNF pending · <a href="index.html">← front page</a></div>
 </header>
 <div class="wrap">
+
+<div class="headliners"><div class="mod full board"><h3>The board</h3><p class="sub">Solid bar is the score now; the dashed outline is where ESPN projects it to finish. Green is leading its matchup. ● on the field tonight · ○ Monday night.</p><div class="r lead">
+  <div class="nm">PedanticGaspOfaFart<small><span class="dots"></span>done</small></div>
+  <div class="trk"><div class="bar" style="width:98.0%"></div></div>
+  <div class="pts">174.56</div><div class="pj"><span class="pw">proj </span>174.6</div></div><div class="r lead">
+  <div class="nm">Spreadin' dem Sheets<small><span class="dots"><i class="l"></i><i class="m"></i><i class="m"></i></span>1 tonight · 2 Mon</small></div>
+  <div class="trk"><div class="ghost" style="width:92.1%"></div><div class="bar" style="width:78.8%"></div></div>
+  <div class="pts">140.36</div><div class="pj"><span class="pw">proj </span>164.1</div></div><div class="r lead">
+  <div class="nm">Two Chinz<small><span class="dots"><i class="l"></i></span>1 tonight</small></div>
+  <div class="trk"><div class="ghost" style="width:71.5%"></div><div class="bar" style="width:69.1%"></div></div>
+  <div class="pts">123.12</div><div class="pj"><span class="pw">proj </span>127.4</div></div><div class="r trail">
+  <div class="nm">The Real Chargers<small><span class="dots"><i class="l"></i><i class="m"></i></span>1 tonight · 1 Mon</small></div>
+  <div class="trk"><div class="ghost" style="width:75.7%"></div><div class="bar" style="width:67.7%"></div></div>
+  <div class="pts">120.56</div><div class="pj"><span class="pw">proj </span>134.9</div></div><div class="r lead">
+  <div class="nm">Waiver Wire Wizards<small><span class="dots"><i class="l"></i><i class="l"></i></span>2 tonight</small></div>
+  <div class="trk"><div class="ghost" style="width:71.9%"></div><div class="bar" style="width:63.3%"></div></div>
+  <div class="pts">112.68</div><div class="pj"><span class="pw">proj </span>128.0</div></div><div class="r lead">
+  <div class="nm">The Raleighwood Boo Bears<small><span class="dots"><i class="l"></i><i class="l"></i><i class="m"></i></span>2 tonight · 1 Mon</small></div>
+  <div class="trk"><div class="ghost" style="width:75.4%"></div><div class="bar" style="width:61.3%"></div></div>
+  <div class="pts">109.20</div><div class="pj"><span class="pw">proj </span>134.3</div></div><div class="r trail">
+  <div class="nm">Righteous Dave<small><span class="dots"><i class="m"></i><i class="m"></i></span>2 Mon</small></div>
+  <div class="trk"><div class="ghost" style="width:72.8%"></div><div class="bar" style="width:60.8%"></div></div>
+  <div class="pts">108.26</div><div class="pj"><span class="pw">proj </span>129.6</div></div><div class="r lead">
+  <div class="nm">Poop Poop<small><span class="dots"></span>done</small></div>
+  <div class="trk"><div class="bar" style="width:58.6%"></div></div>
+  <div class="pts">104.36</div><div class="pj"><span class="pw">proj </span>104.4</div></div><div class="r trail">
+  <div class="nm">Raleighwood Chargers<small><span class="dots"><i class="l"></i></span>1 tonight</small></div>
+  <div class="trk"><div class="ghost" style="width:62.5%"></div><div class="bar" style="width:58.3%"></div></div>
+  <div class="pts">103.74</div><div class="pj"><span class="pw">proj </span>111.3</div></div><div class="r trail">
+  <div class="nm">She Gibbs it up until i Corum<small><span class="dots"><i class="l"></i><i class="l"></i><i class="m"></i></span>2 tonight · 1 Mon</small></div>
+  <div class="trk"><div class="ghost" style="width:70.4%"></div><div class="bar" style="width:54.1%"></div></div>
+  <div class="pts">96.36</div><div class="pj"><span class="pw">proj </span>125.4</div></div><div class="r trail">
+  <div class="nm">Handy Cramp<small><span class="dots"><i class="l"></i><i class="m"></i><i class="m"></i></span>1 tonight · 2 Mon</small></div>
+  <div class="trk"><div class="ghost" style="width:69.3%"></div><div class="bar" style="width:52.8%"></div></div>
+  <div class="pts">94.10</div><div class="pj"><span class="pw">proj </span>123.4</div></div><div class="r trail">
+  <div class="nm">The People's Champ<small><span class="dots"><i class="m"></i></span>1 Mon</small></div>
+  <div class="trk"><div class="ghost" style="width:55.5%"></div><div class="bar" style="width:51.6%"></div></div>
+  <div class="pts">91.92</div><div class="pj"><span class="pw">proj </span>98.9</div></div></div><div class="mod swing"><h3>Swing meter</h3><p class="sub">Bar is the margin right now, toward the team that leads. The amber tick is where the projections say it finishes; on the far side of the line means a flip. Scale runs to ±45.</p><div class="r">
+  <div class="a">Boo Bears<small>up 0.94 · 2 tonight · 1 Mon</small></div>
+  <div class="mt"><div class="bar" style="left:49.0%;width:1.0%"></div><div class="pm" style="left:calc(44.8% - 1px)" title="projected final margin"></div></div>
+  <div class="b">Righteous Dave<small>proj +4.7 Boo Bears · 2 Mon</small></div></div><div class="r">
+  <div class="a">Two Chinz<small>up 26.76 · 1 tonight</small></div>
+  <div class="mt"><div class="bar" style="left:20.3%;width:29.7%"></div><div class="pm" style="left:calc(47.8% - 1px)" title="projected final margin"></div></div>
+  <div class="b">Gibbs team<small>proj +2.0 Two Chinz · 2 tonight · 1 Mon</small></div></div><div class="r">
+  <div class="a">Wizards<small>up 8.94 · 2 tonight</small></div>
+  <div class="mt"><div class="bar" style="left:40.1%;width:9.9%"></div><div class="pm" style="left:calc(31.4% - 1px)" title="projected final margin"></div></div>
+  <div class="b">Raleighwood Chargers<small>proj +16.7 Wizards · 1 tonight</small></div></div><div class="r flip">
+  <div class="a">Poop Poop<small>up 10.26 · done</small></div>
+  <div class="mt"><div class="bar" style="left:38.6%;width:11.4%"></div><div class="pm" style="left:calc(71.1% - 1px)" title="projected final margin"></div></div>
+  <div class="b">Handy Cramp<small>proj −19.0 Handy Cramp · 1 tonight · 2 Mon</small></div></div><div class="r">
+  <div class="a">Sheets<small>up 19.80 · 1 tonight · 2 Mon</small></div>
+  <div class="mt"><div class="bar" style="left:28.0%;width:22.0%"></div><div class="pm" style="left:calc(17.6% - 1px)" title="projected final margin"></div></div>
+  <div class="b">Real Chargers<small>proj +29.2 Sheets · 1 tonight · 1 Mon</small></div></div><div class="r">
+  <div class="a">Pedantic<small>up 82.64 · done</small></div>
+  <div class="mt"><div class="bar" style="left:0.0%;width:50.0%"></div><div class="pm" style="left:calc(0.0% - 1px)" title="projected final margin"></div></div>
+  <div class="b">People's Champ<small>proj +75.7 Pedantic · 1 Mon</small></div></div></div><div class="mod lines"><h3>Top lines</h3><p class="sub">The ten best individual scores in the league so far, and who they belong to.</p><div class="r"><div class="k">1</div><div class="p">Caleb Williams<small>Righteous Dave</small></div><div class="trk"><div class="bar" style="width:100.0%"></div></div><div class="pts">37.26</div></div><div class="r"><div class="k">2</div><div class="p">Josh Allen<small>Sheets</small></div><div class="trk"><div class="bar" style="width:95.7%"></div></div><div class="pts">35.66</div></div><div class="r"><div class="k">3</div><div class="p">Derrick Henry<small>Pedantic</small></div><div class="trk"><div class="bar" style="width:93.4%"></div></div><div class="pts">34.80</div></div><div class="r"><div class="k">4</div><div class="p">D'Andre Swift<small>Sheets</small></div><div class="trk"><div class="bar" style="width:85.6%"></div></div><div class="pts">31.90</div></div><div class="r"><div class="k">5</div><div class="p">Jahmyr Gibbs<small>Gibbs team</small></div><div class="trk"><div class="bar" style="width:83.5%"></div></div><div class="pts">31.10</div></div><div class="r"><div class="k">6</div><div class="p">Ashton Jeanty<small>Raleighwood Chargers</small></div><div class="trk"><div class="bar" style="width:79.7%"></div></div><div class="pts">29.70</div></div><div class="r"><div class="k">7</div><div class="p">David Montgomery<small>Wizards</small></div><div class="trk"><div class="bar" style="width:73.5%"></div></div><div class="pts">27.40</div></div><div class="r"><div class="k">8</div><div class="p">Bijan Robinson<small>Handy Cramp</small></div><div class="trk"><div class="bar" style="width:73.3%"></div></div><div class="pts">27.30</div></div><div class="r"><div class="k">9</div><div class="p">Justin Jefferson<small>Righteous Dave</small></div><div class="trk"><div class="bar" style="width:73.0%"></div></div><div class="pts">27.20</div></div><div class="r"><div class="k">10</div><div class="p">Trevor Lawrence<small>Boo Bears</small></div><div class="trk"><div class="bar" style="width:70.0%"></div></div><div class="pts">26.10</div></div></div><div class="mod full ringsmod"><h3>Top-three share</h3><p class="sub">How much of each team's total came from its three best players. Red is top-heavy (65%+), amber in between, green is a roster that scored all the way down.</p><div class="rings"><div class="ring hi"><div class="w"><svg viewBox="0 0 64 64" aria-hidden="true"><circle class="bg" cx="32" cy="32" r="27"/><circle class="fg" cx="32" cy="32" r="27" style="--d:114.2"/></svg><div class="v">67%</div></div><div class="t">Dave</div></div><div class="ring mid"><div class="w"><svg viewBox="0 0 64 64" aria-hidden="true"><circle class="bg" cx="32" cy="32" r="27"/><circle class="fg" cx="32" cy="32" r="27" style="--d:108.5"/></svg><div class="v">64%</div></div><div class="t">Sheets</div></div><div class="ring mid"><div class="w"><svg viewBox="0 0 64 64" aria-hidden="true"><circle class="bg" cx="32" cy="32" r="27"/><circle class="fg" cx="32" cy="32" r="27" style="--d:106.4"/></svg><div class="v">63%</div></div><div class="t">Raleighwood</div></div><div class="ring mid"><div class="w"><svg viewBox="0 0 64 64" aria-hidden="true"><circle class="bg" cx="32" cy="32" r="27"/><circle class="fg" cx="32" cy="32" r="27" style="--d:105.8"/></svg><div class="v">62%</div></div><div class="t">Gibbs team</div></div><div class="ring mid"><div class="w"><svg viewBox="0 0 64 64" aria-hidden="true"><circle class="bg" cx="32" cy="32" r="27"/><circle class="fg" cx="32" cy="32" r="27" style="--d:101.9"/></svg><div class="v">60%</div></div><div class="t">People's Champ</div></div><div class="ring mid"><div class="w"><svg viewBox="0 0 64 64" aria-hidden="true"><circle class="bg" cx="32" cy="32" r="27"/><circle class="fg" cx="32" cy="32" r="27" style="--d:97.9"/></svg><div class="v">58%</div></div><div class="t">Handy Cramp</div></div><div class="ring mid"><div class="w"><svg viewBox="0 0 64 64" aria-hidden="true"><circle class="bg" cx="32" cy="32" r="27"/><circle class="fg" cx="32" cy="32" r="27" style="--d:94.4"/></svg><div class="v">56%</div></div><div class="t">Wizards</div></div><div class="ring lo"><div class="w"><svg viewBox="0 0 64 64" aria-hidden="true"><circle class="bg" cx="32" cy="32" r="27"/><circle class="fg" cx="32" cy="32" r="27" style="--d:86.8"/></svg><div class="v">51%</div></div><div class="t">Boo Bears</div></div><div class="ring lo"><div class="w"><svg viewBox="0 0 64 64" aria-hidden="true"><circle class="bg" cx="32" cy="32" r="27"/><circle class="fg" cx="32" cy="32" r="27" style="--d:83.9"/></svg><div class="v">49%</div></div><div class="t">Real Chargers</div></div><div class="ring lo"><div class="w"><svg viewBox="0 0 64 64" aria-hidden="true"><circle class="bg" cx="32" cy="32" r="27"/><circle class="fg" cx="32" cy="32" r="27" style="--d:80.7"/></svg><div class="v">48%</div></div><div class="t">Poop Poop</div></div><div class="ring lo"><div class="w"><svg viewBox="0 0 64 64" aria-hidden="true"><circle class="bg" cx="32" cy="32" r="27"/><circle class="fg" cx="32" cy="32" r="27" style="--d:79.7"/></svg><div class="v">47%</div></div><div class="t">Pedantic</div></div><div class="ring lo"><div class="w"><svg viewBox="0 0 64 64" aria-hidden="true"><circle class="bg" cx="32" cy="32" r="27"/><circle class="fg" cx="32" cy="32" r="27" style="--d:76.4"/></svg><div class="v">45%</div></div><div class="t">Two Chinz</div></div></div></div></div>
 
 <div class="games"><div class="game"><span class="st open">MNF PENDING</span>
   <div class="row lead"><div class="nm">The Raleighwood Boo Bears<small>2 live tonight · 1 Monday</small></div><div class="pts">109.20</div></div>
@@ -216,6 +328,14 @@ footer{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 18px;ma
     (function flick(){var s=sp[Math.floor(Math.random()*sp.length)];s.classList.add('off');
       setTimeout(function(){s.classList.remove('off');if(Math.random()<.35){setTimeout(function(){s.classList.add('off');setTimeout(function(){s.classList.remove('off')},60)},90)}},70+Math.random()*140);
       setTimeout(flick,900+Math.random()*3600)})();
+  }
+
+  /* ---- chart reveal ---- */
+  var mods=document.querySelectorAll('.mod');
+  if(mods.length){
+    if(reduce||!('IntersectionObserver' in window)){mods.forEach(function(m){m.classList.add('in')})}
+    else{var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.15});
+      mods.forEach(function(m){io.observe(m)})}
   }
   /* ---- football rain ---- */
   var c=document.getElementById('rain');
