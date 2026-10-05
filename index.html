@@ -444,9 +444,9 @@ footer{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 18px;ma
 
 <div class="thisweek">
   <span class="lbl">This week</span>
-  <a href="week3-recap.html"><b>Week 3 Recap &amp; Week 4 Outlook</b> Tuesday · finals, ledger, lab, lineup check</a>
-  <a href="week3-read.html"><b>Week 3 Read</b> Sunday night</a>
-  <span class="soon">Week 4 Way Too Early Read · Sunday night</span>
+  <a href="week4-read.html"><b>Week 4 · Way Too Early Read</b> Sunday night · SNF and MNF pending</a>
+  <a href="week3-recap.html"><b>Week 3 Recap &amp; Week 4 Outlook</b> Tuesday</a>
+  <span class="soon">Week 4 Recap &amp; Outlook · Tuesday</span>
 </div>
 
 <div class="headliners" style="margin-top:22px">
@@ -471,7 +471,8 @@ footer{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 18px;ma
   <div class="issue"><div class="wk">Week 2<small>Sun Sept 20</small></div><div><a href="week2-read.html">Way Too Early Read: 0.76 between Foy and Pian, and the Raleighwood Chargers find 133</a><p>Devin Lloyd scores 31 from linebacker.</p></div></div>
   <div class="issue"><div class="wk">Week 1<small>Tue Sept 15</small></div><div><a href="week1-recap.html">Recap &amp; Outlook: the Gibbs team flips it by 48, the Real Chargers lose with 151</a><p>Finals, standings, the luck index, the wire, and power rankings.</p></div></div>
   <div class="issue"><div class="wk">Week 1<small>Sun Sept 13</small></div><div><a href="week1-read.html">Way Too Early Read: Pedantic drops 174 and goes home early</a><p>Six matchups and a 0.94 game.</p></div></div>
-  <div class="issue soon"><div class="wk">Week 4<small>Sun Oct 4</small></div><div><div class="t">Way Too Early Read</div><p>After the late games, Monday night pending.</p></div></div>
+  <div class="issue"><div class="wk">Week 4<small>Sun Oct 4</small></div><div><a href="week4-read.html">Way Too Early Read: the league makes its first trade, and four games are still live</a><p>Pickens to the Boo Bears, $87 on a running back, and The People's Champ leading the Wizards by 0.46.</p></div></div>
+  <div class="issue soon"><div class="wk">Week 4<small>Tue Oct 6</small></div><div><div class="t">Weekly Recap &amp; Outlook</div><p>Finals, the ledger, the lab, the lineup check, and Week 5.</p></div></div>
 </div>
 
 <footer><span>The Howl · 2026</span><span>Kimosabe Wolfpack Titties · 2026 season</span></footer>
@@ -480,7 +481,7 @@ footer{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 18px;ma
 <script>
 (function(){
   /* ---- ticker ---- */
-  var items=['<b>THE HOWL</b> · THE WEEKLY PAPER OF KIMOSABE WOLFPACK TITTIES','<span class="r">WEEK 3 FINAL · HANDY CRAMP 187.36 · HIGHEST SCORE OF THE SEASON</span>','BOO BEARS AND PEDANTIC 3-0 · SHEETS, HANDY CRAMP, GIBBS TEAM, WIZARDS 2-1','REAL CHARGERS AND RIGHTEOUS DAVE 0-3','SHEETS FIRST IN POINTS AT 412.80 · REAL CHARGERS MOST AGAINST AT 456.72','WEEK 4 GAME OF THE WEEK · RIGHTEOUS DAVE vs HANDY CRAMP'];
+  var items=['<b>THE HOWL</b> · THE WEEKLY PAPER OF KIMOSABE WOLFPACK TITTIES','<span class="g">WEEK 4 READ · THE FIRST TRADE OF THE SEASON · PICKENS TO THE BOO BEARS</span>','<span class="r">PEDANTIC SPENT $87 ON OLLIE GORDON II</span>',"PEOPLE'S CHAMP 102.46 · WIZARDS 102.00 · 0.46 APART",'RIGHTEOUS DAVE vs HANDY CRAMP STILL LIVE · 0-3 AGAINST 187.36','WEEK 4 RECAP &amp; OUTLOOK · TUESDAY'];
   var track=document.getElementById('track');
   if(track){var html=items.map(function(t){return '<span class="i">'+t+'</span>'}).join('');track.innerHTML=html+html;}
   /* ---- text size ---- */
